@@ -1,0 +1,37 @@
+body {
+  background-color: #ededed !important;
+  margin: 0; /* Remove default body margin */
+}
+
+.header {
+  background-color: #ffffff;
+}
+
+.headerNav a:hover {
+  color: #a05aff !important;
+}
+
+.headerNav a.active {
+  color: #a05aff !important;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.login-container {
+  padding: 5vw;
+  border: 2px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  max-width: 700px !important;
+  margin: auto;
+}
+
+.form-container {
+  padding: 5vw;
+  border: 2px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: auto;
+}
