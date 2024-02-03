@@ -1,0 +1,36 @@
+body {
+  background-color: #b6bbc4 !important;
+}
+
+h1,
+h4 {
+  color: #0d6efd !important;
+  text-decoration: underline;
+}
+
+.text {
+  font-weight: 500 !important;
+}
+
+.sidebar a:hover {
+  background: #0d6efd;
+  color: #ffffff;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0;
+}
+
+.logout a:hover {
+  background: #dc3545;
+  color: #ffffff !important;
+}
+
+.toggle {
+  cursor: pointer;
+  border: none !important;
+}
+
+.toggle:focus {
+  border: none !important;
+}

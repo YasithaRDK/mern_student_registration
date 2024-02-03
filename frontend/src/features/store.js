@@ -1,12 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./auth/authSlice";
-import studentReducer from "./student/studentSlice";
-import classroomReducer from "./classroom/classroomSlice";
-
+import classroomsReducer from "./classrooms/classroomsSlice";
+import studentsReducer from "./students/studentsSlice";
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    students: studentReducer,
-    classrooms: classroomReducer,
+    students: studentsReducer,
+    classrooms: classroomsReducer,
   },
 });

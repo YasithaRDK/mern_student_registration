@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const API_URL = "/api/users/";
+const API_URL = "http://localhost:5000/api/users/";
 
-// Login user
+//Login user
 const login = async (userData) => {
   const response = await axios.post(API_URL + "login", userData);
 
@@ -13,14 +13,14 @@ const login = async (userData) => {
   return response.data;
 };
 
-// Logout user
-const logout = () => {
-  localStorage.removeItem("user");
+//Logout user
+const logout = async () => {
+  await localStorage.removeItem("user");
 };
 
 const authService = {
-  logout,
   login,
+  logout,
 };
 
 export default authService;
