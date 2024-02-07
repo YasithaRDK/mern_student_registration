@@ -2,7 +2,11 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import StudentsForm from "../components/students/StudentsForm";
 import StudentsTable from "../components/students/StudentsTable";
-import { getStudents, reset } from "../features/students/studentsSlice";
+import {
+  getStudents,
+  reset,
+  resetSelectedStudent,
+} from "../features/students/studentsSlice";
 import { toast } from "react-toastify";
 
 const Students = () => {
@@ -18,8 +22,8 @@ const Students = () => {
     }
 
     dispatch(getStudents());
-
     return () => {
+      dispatch(resetSelectedStudent());
       dispatch(reset());
     };
   }, [isError, message, dispatch]);

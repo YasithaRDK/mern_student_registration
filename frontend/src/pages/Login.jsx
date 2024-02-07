@@ -51,8 +51,10 @@ const Login = () => {
     dispatch(login(userData));
   };
 
+  const style = { height: "100vh" };
+
   if (isLoading) {
-    return <Loader />;
+    return <Loader style={style} />;
   }
 
   return (

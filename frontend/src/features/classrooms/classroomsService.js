@@ -14,8 +14,13 @@ const getClassrooms = async (token) => {
 };
 
 // Get single classroom
-const getClassroom = async (id) => {
-  const response = await axios.get(API_URL + id);
+const getClassroom = async (id, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await axios.get(API_URL + id, config);
   return response.data;
 };
 
@@ -31,16 +36,24 @@ const createClassroom = async (data, token) => {
 };
 
 // Update classroom
-const updateClassroom = async (id, data) => {
-  const response = await axios.put(API_URL + id, data, {
-    headers: { "Content-Type": "multipart/form-data" },
-  });
+const updateClassroom = async (id, data, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await axios.put(API_URL + id, data, config);
   return response.data;
 };
 
 // Delete classroom
-const deleteClassroom = async (id) => {
-  const response = await axios.delete(API_URL + id);
+const deleteClassroom = async (id, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await axios.delete(API_URL + id, config);
   return response.data;
 };
 

@@ -33,7 +33,7 @@ const StudentsTable = ({ students, isLoading }) => {
               <Loader />
             ) : (
               <div className="table-responsive">
-                <Table bordered hover>
+                <Table bordered>
                   <thead>
                     <tr>
                       <th>#</th>
@@ -86,7 +86,7 @@ const StudentsTable = ({ students, isLoading }) => {
                     ) : (
                       <tr>
                         <td colSpan={9} className="text-danger">
-                          No data found
+                          No data founded
                         </td>
                       </tr>
                     )}
