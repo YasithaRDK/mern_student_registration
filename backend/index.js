@@ -13,17 +13,11 @@ import userRouter from "./routes/userRoutes.js";
 
 dotenv.config();
 
-connectDB();
-
 const port = process.env.PORT;
 
 const app = express();
 
-const corsOptions = {
-  origin: "https://mern-student-registration.vercel.app",
-  credentials: true,
-};
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -42,4 +36,8 @@ app.get("/", (req, res) => {
 
 app.use(errorHandler);
 
-app.listen(port, () => console.log(`Server started on port: ${port}`));
+connectDB()
+  .then(() =>
+    app.listen(port, () => console.log(`Server started on port: ${port}`))
+  )
+  .catch((error) => console.log(error.message));
