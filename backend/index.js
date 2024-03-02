@@ -30,10 +30,6 @@ app.use("/api/subjects", subjectRouter);
 app.use("/api/allocate-classrooms", allocateClassroomRouter);
 app.use("/api/allocate-subjects", allocateSubjectRouter);
 
-app.get("/", (req, res) => {
-  res.send("Welcome");
-});
-
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 app.get("*", (req, res) => {
