@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/classrooms/";
+const API_URL = "/api/classrooms/";
 
 // Get all classrooms
 const getClassrooms = async (token) => {
