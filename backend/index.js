@@ -28,7 +28,6 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => res.json("Hello"));
 app.use("/api/users", userRouter);
 app.use("/api/students", studentRouter);
 app.use("/api/classrooms", classroomRouter);
@@ -36,6 +35,10 @@ app.use("/api/teachers", teacherRouter);
 app.use("/api/subjects", subjectRouter);
 app.use("/api/allocate-classrooms", allocateClassroomRouter);
 app.use("/api/allocate-subjects", allocateSubjectRouter);
+
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
 
 app.use(errorHandler);
 
