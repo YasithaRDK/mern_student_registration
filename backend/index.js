@@ -9,10 +9,13 @@ import subjectRouter from "./routes/subjectRoutes.js";
 import allocateClassroomRouter from "./routes/allocateClassroomRoutes.js";
 import allocateSubjectRouter from "./routes/allocateSubjectRoutes.js";
 import userRouter from "./routes/userRoutes.js";
+import path from "path";
 
 dotenv.config();
 
 const port = process.env.PORT;
+
+const __dirname = path.resolve();
 
 const app = express();
 
