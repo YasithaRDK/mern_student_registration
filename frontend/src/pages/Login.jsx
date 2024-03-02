@@ -59,7 +59,7 @@ const Login = () => {
 
   return (
     <Container>
-      <Row className="justify-content-center">
+      <Row className="vh-100 d-flex justify-content-center align-items-center">
         <Col
           xs={11}
           md={9}
